@@ -1,4 +1,4 @@
-﻿package alltester;
+package alltester;
 
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
