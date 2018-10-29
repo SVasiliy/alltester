@@ -10,7 +10,7 @@ public class Example {
 	
 	@RequestMapping("/")
 	String home() {
-		return "ВСЁ!!!";
+		return "start again";
 	}
 
 	public static void main(String[] args) {
