@@ -48,6 +48,11 @@ public class ApplicationController {
         return createResponse();
     }
 
+    @RequestMapping(value = "/customers", method = RequestMethod.GET)
+    public String handleCustomers() {
+        return "customers";
+    }
+
     private String createResponse() {
         return "Access Granted";
     }

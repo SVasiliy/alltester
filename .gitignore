@@ -1,4 +1,5 @@
 bin/
+src/main/resources/application.properties
 
 # Eclipse
 .classpath
