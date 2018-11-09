@@ -42,6 +42,7 @@
             <id>dev</id>
             <properties>
                 <keycloak.auth-server-url>@keycloak.auth-server-url@</keycloak.auth-server-url>
+                <keycloak.credentials.secret>@keycloak.credentials.secret@</keycloak.credentials.secret>
             </properties>
         </profile>
 	</profiles>
