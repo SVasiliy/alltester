@@ -4,6 +4,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.google.gson.Gson;
+
+import model.UserList;
+
+
 @RestController
 public class ApplicationController {
 
@@ -36,6 +41,16 @@ public class ApplicationController {
     @RequestMapping(value = "/api/customers", method = RequestMethod.GET)
     public String handleCustomers() {
         return "customers";
+    }
+    
+
+    // for testing inside alltesterui
+    @RequestMapping(value = "/api/users", method = RequestMethod.GET)
+    public String getUserList() {
+    	
+    	Gson gson = new Gson();
+    	return gson.toJson(UserList.getUserList());
+    	
     }
 
     private String createResponse() {
