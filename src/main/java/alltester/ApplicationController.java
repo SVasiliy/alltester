@@ -1,11 +1,13 @@
 package alltester;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 
+import model.User;
 import model.UserList;
 
 
@@ -53,6 +55,14 @@ public class ApplicationController {
     	
     }
 
+    @RequestMapping(value = "/api/users/{userId}", method = RequestMethod.GET)
+    public User getUser(@PathVariable Integer userId) {
+    	
+    	return UserList.getUserList().stream().filter(x -> x.getUserId().equals(userId)).findFirst().get();
+    	
+    }
+    
+    
     private String createResponse() {
         return "Access Granted";
     }
