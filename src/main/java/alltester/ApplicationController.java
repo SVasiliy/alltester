@@ -1,5 +1,6 @@
 package alltester;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -48,6 +49,7 @@ public class ApplicationController {
 
     // for testing inside alltesterui
     @RequestMapping(value = "/api/users", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public String getUserList() {
     	
     	Gson gson = new Gson();
@@ -56,6 +58,7 @@ public class ApplicationController {
     }
 
     @RequestMapping(value = "/api/users/{userId}", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public User getUser(@PathVariable Integer userId) {
     	
     	return UserList.getUserList().stream().filter(x -> x.getUserId().equals(userId)).findFirst().get();
