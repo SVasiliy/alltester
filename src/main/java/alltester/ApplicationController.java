@@ -61,7 +61,7 @@ public class ApplicationController {
     @CrossOrigin(origins = "*")
     public User getUser(@PathVariable Integer userId) {
     	
-    	return UserList.getUserList().stream().filter(x -> x.getUserId().equals(userId)).findFirst().get();
+    	return UserList.getUserList().stream().filter(x -> x.getId().equals(userId)).findFirst().get();
     	
     }
     

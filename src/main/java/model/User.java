@@ -2,24 +2,24 @@ package model;
 
 public class User {
 
-	private Integer userId;
+	private Integer id;
 	private String username;
 	private String name;
 	private String email;
 	
-	public User(Integer userId, String username, String name, String email) {
+	public User(Integer id, String username, String name, String email) {
 		super();
-		this.userId = userId;
+		this.id = id;
 		this.username = username;
 		this.name = name;
 		this.email = email;
 	}
 	
-	public Integer getUserId() {
-		return userId;
+	public Integer getId() {
+		return id;
 	}
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getUsername() {
 		return username;
