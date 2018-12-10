@@ -6,13 +6,15 @@ public class User {
 	private String username;
 	private String name;
 	private String email;
+	private Address address;
 	
-	public User(Integer id, String username, String name, String email) {
+	public User(Integer id, String username, String name, String email, Address address) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.name = name;
 		this.email = email;
+		this.address = address;
 	}
 	
 	public Integer getId() {
@@ -39,5 +41,12 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
 	
 }
