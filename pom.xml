@@ -112,7 +112,7 @@
 		    <repository>alltester</repository>
 		    <tag>1.0</tag>
 		    <buildArgs>
-		      <JAR_FILE>target/myproject-0.0.1-SNAPSHOT.jar</JAR_FILE>
+		      <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
 		    </buildArgs>
 		  </configuration>
 		</plugin>
