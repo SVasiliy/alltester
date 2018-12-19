@@ -67,6 +67,6 @@ public class ApplicationController {
     
     
     private String createResponse() {
-        return "Access Granted";
+        return "Access Granted!";
     }
 }
