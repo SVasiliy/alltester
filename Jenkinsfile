@@ -1,7 +1,7 @@
 pipeline {
   agent {
         docker {
-            image 'maven:3.6.0-alpine'
+            image 'maven:3-alpine'
             args '-v /ec2-user/.m2:/root/.m2'
         }
     }
