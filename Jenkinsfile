@@ -10,6 +10,7 @@ pipeline {
       steps {
         git(url: 'https://github.com/SVasiliy/alltester.git', branch: 'master')
         sh 'echo test'
+        sh 'mvn clean install'
       }
     }
   }
