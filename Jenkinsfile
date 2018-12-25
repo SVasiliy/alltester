@@ -9,8 +9,14 @@ pipeline {
     stage('build') {
       steps {
         git(url: 'https://github.com/SVasiliy/alltester.git', branch: 'master')
-        sh 'echo test'
         sh 'mvn clean install'
+      }
+    }
+    stage('deliver') {
+      steps {
+        sh 'docker stop alltester'
+        sh 'docker rm alltester'
+        sh 'docker run -p 9100:8080 --name=alltester -d alltester:1.0'
       }
     }
   }
