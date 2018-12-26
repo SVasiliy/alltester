@@ -15,9 +15,9 @@ pipeline {
     stage('deliver') {
       agent none
       steps {
-        sh 'docker stop alltester'
-        sh 'docker rm alltester'
-        sh 'docker run -p 9100:8080 --name=alltester -d alltester:1.0'
+        sh 'sudo docker stop alltester'
+        sh 'sudo docker rm alltester'
+        sh 'sudo docker run -p 9100:8080 --name=alltester -d alltester:1.0'
       }
     }
   }
