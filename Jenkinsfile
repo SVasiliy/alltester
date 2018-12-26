@@ -1,5 +1,5 @@
 pipeline {
-	   agent any
+  agent any
   stages {
     stage('build') {
 	  agent {
@@ -16,7 +16,7 @@ pipeline {
     stage('deliver') {
 	   agent none
       steps {
-        sh '/home/restart_vjenkins.sh'
+        sh '/home/restart_alltester.sh'
       }
     }
   }
