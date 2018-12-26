@@ -13,7 +13,6 @@ pipeline {
       }
     }
     stage('deliver') {
-      agent none
       steps {
         sh 'sudo docker stop alltester'
         sh 'sudo docker rm alltester'
