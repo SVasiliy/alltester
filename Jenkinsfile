@@ -13,6 +13,7 @@ pipeline {
       }
     }
     stage('deliver') {
+      agent none
       steps {
         sh 'docker stop alltester'
         sh 'docker rm alltester'
