@@ -51,6 +51,9 @@
                 <keycloak.credentials.secret>@keycloak.credentials.secret@</keycloak.credentials.secret>
             </properties>
         </profile>
+        <profile>
+            <id>prod</id>
+        </profile>
 	</profiles>
 
 	<build>
