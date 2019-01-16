@@ -10,10 +10,8 @@ pipeline {
 	  }
       steps {
         git(url: 'https://github.com/SVasiliy/alltester.git', branch: 'master')
-        sh 'cd src/main/resources'
-        sh 'ls'
-        load '/home/application-prod.properties'
-        sh 'ls'
+        sh 'cp /home/application-prod.properties src/main/resources'
+        sh 'ls src/main/resources'
         sh 'mvn clean install'
       }
     }
