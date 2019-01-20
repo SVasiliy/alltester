@@ -18,30 +18,35 @@ public class ApplicationController {
 	
     // available to all users
     @RequestMapping(value = "/api/resourcea", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public String handleResourceA() {
         return createResponse();
     }
 
     // available to all users
     @RequestMapping(value = "/api/resourceb", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public String handleResourceB() {
         return createResponse();
     }
 
     // available to supervisors
     @RequestMapping(value = "/api/premium", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public String handlePremiumResource() {
         return createResponse();
     }
 
     // available to admin
     @RequestMapping(value = "/api/admin", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public String handleAdminResource() {
         return createResponse();
     }
 
     // available to managers
     @RequestMapping(value = "/api/customers", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
     public String handleCustomers() {
         return "customers";
     }
