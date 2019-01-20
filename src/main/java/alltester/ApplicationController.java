@@ -32,7 +32,7 @@ public class ApplicationController {
 
     // available to supervisors
     @RequestMapping(value = "/api/premium", method = RequestMethod.GET)
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "*", allowCredentials = "true")
     public String handlePremiumResource() {
         return createResponse();
     }
