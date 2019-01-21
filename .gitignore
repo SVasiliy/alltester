@@ -1,4 +1,5 @@
 bin/
+application-prod.properties
 
 # Eclipse
 .classpath
