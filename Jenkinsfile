@@ -12,7 +12,7 @@ pipeline {
         git(url: 'https://github.com/SVasiliy/alltester.git', branch: 'master')
         sh 'cp /home/application-prod.properties src/main/resources'
         sh 'ls src/main/resources'
-        sh 'mvn clean install -U'
+        sh 'mvn clean install'
       }
     }
     stage('deliver') {
