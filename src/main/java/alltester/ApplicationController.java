@@ -1,5 +1,7 @@
 package alltester;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +16,17 @@ import model.UserList;
 
 @RestController
 public class ApplicationController {
+	
+	@Autowired
+	private Environment env;
+	
+	
+    // get application.properties version
+    @RequestMapping(value = "/api/version", method = RequestMethod.GET)
+    @CrossOrigin(origins = "*")
+    public String getVersion() {
+        return env.getProperty("version"); 
+    }
 
 	
     // available to all users
