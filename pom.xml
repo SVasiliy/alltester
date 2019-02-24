@@ -12,6 +12,10 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.4.RELEASE</version>
 	</parent>
+	
+	<properties>
+		<docker.skip>false</docker.skip>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -97,6 +101,7 @@
 			    </execution>
 			  </executions>
 			  <configuration>
+			    <skip>${docker.skip}</skip>
 			    <repository>alltester</repository>
 			    <tag>1.0</tag>
 			    <buildArgs>
