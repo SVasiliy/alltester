@@ -11,6 +11,7 @@ pipeline {
       steps {
         git(url: 'https://github.com/SVasiliy/alltester.git', branch: 'master')
         sh 'cp /home/application-prod.properties src/main/resources'
+        sh 'pwd'
         sh 'ls src/main/resources'
         sh 'mvn clean install'
       }
