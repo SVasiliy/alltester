@@ -94,6 +94,7 @@
 			  <version>1.4.9</version>
 			  <executions>
 			    <execution>
+			      <phase>none</phase>
 			      <id>default</id>
 			      <goals>
 			        <goal>build</goal>
