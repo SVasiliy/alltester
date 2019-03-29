@@ -14,6 +14,7 @@ pipeline {
         sh 'pwd'
         sh 'ls src/main/resources'
         sh 'mvn clean install'
+        sh 'docker image build -t alltester:1.0 --build-arg JAR_FILE=target/myproject-0.0.1-SNAPSHOT.jar .'
       }
     }
     stage('deliver') {
