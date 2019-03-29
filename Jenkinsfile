@@ -16,7 +16,7 @@ pipeline {
         sh 'ls /bin'
         sh 'ls /usr/bin'
         sh 'mvn clean install'
-        sh '/bin/docker -v'
+        sh '/usr/bin/docker -v'
       }
     }
     stage('deliver') {
