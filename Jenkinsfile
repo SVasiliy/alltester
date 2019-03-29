@@ -19,7 +19,6 @@ pipeline {
       }
     }
     stage('deliver') {
-	   agent none
       steps {
         sh 'docker image build -t alltester:1.0 --build-arg JAR_FILE=${WORKSPACE}/target/myproject-0.0.1-SNAPSHOT.jar .'
         sh '/home/restart_alltester.sh'
