@@ -16,7 +16,7 @@ pipeline {
         sh 'ls /bin'
         sh 'ls /usr/bin'
         sh 'mvn clean install'
-        sh '/bin/bash /bin/docker image build -t alltester:1.0 --build-arg JAR_FILE=target/myproject-0.0.1-SNAPSHOT.jar .'
+        sh '/bin/docker -v'
       }
     }
     stage('deliver') {
