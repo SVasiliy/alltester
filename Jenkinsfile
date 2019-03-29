@@ -13,6 +13,8 @@ pipeline {
         sh 'cp /home/application-prod.properties src/main/resources'
         sh 'pwd'
         sh 'ls src/main/resources'
+        sh 'ls /bin'
+        sh 'ls /usr/bin'
         sh 'mvn clean install'
         sh '/bin/docker image build -t alltester:1.0 --build-arg JAR_FILE=target/myproject-0.0.1-SNAPSHOT.jar .'
       }
