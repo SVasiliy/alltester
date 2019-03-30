@@ -1,0 +1,6 @@
+# initial version
+# card: https://trello.com/c/Ajab8YG4/68-ad
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=prod","/app.jar"]
